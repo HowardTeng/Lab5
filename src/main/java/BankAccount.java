@@ -12,27 +12,81 @@ public class BankAccount {
     /*
      * You may want to use this to distinguish between different kinds of accounts.
      */
+    /***/
     public enum BankAccountType {
+        /***/
         CHECKINGS,
+        /***/
         SAVINGS,
+        /***/
         STUDENT,
+        /***/
         WORKPLACE
     }
 
+    /***/
     private int accountNumber;
-    public BankAccountType accountType;
+    /***/
+    private BankAccountType accountType;
+    /***/
     private double accountBalance;
+    /***/
     private String ownerName;
-    public double interestRate;
+    /***/
+    private double interestRate;
+    /***/
     private double interestEarned;
-
+    /**
+     * @param name n
+     * @param accountCategory a
+     * */
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        this.ownerName = name;
+        this.accountType = accountCategory;
     }
-
-    /*
-     * Implement getters and setters as appropriate for private variables.
-     */
+    /**@return */
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+    /**@return */
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+    /**
+     * @param newType */
+    public void setAccountType(final BankAccountType newType) {
+        this.accountType = newType;
+    }
+    /**
+     * @param newBalance */
+    public void setAccountBalance(final double newBalance) {
+        this.accountBalance = newBalance;
+    }
+    /**@return */
+    public String getOwnerName() {
+        return ownerName;
+    }
+    /**
+     * @param newName */
+    public void setOwnerName(final String newName) {
+        this.ownerName = newName;
+    }
+    /**@return */
+    public double getInterestRate() {
+        return interestRate;
+    }
+    /**
+     * @param newRate */
+    public void setInterestRate(final double newRate) {
+        this.interestRate = newRate;
+    }
+    /**
+     * @param newEarned */
+    public void setInterestEarned(final double newEarned) {
+        this.interestEarned = newEarned;
+    }
+    /**@return */
+    public double getInterestEarned() {
+        return interestEarned;
+    }
 }
